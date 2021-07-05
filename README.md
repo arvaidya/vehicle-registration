@@ -1,5 +1,5 @@
 # vehicle-registration-project
-This project has been created to take care of following requirements
+This Restful API project has been created to take care of following requirements
 
 Coding Task
 
@@ -29,3 +29,6 @@ Spring boot 2.5.2
 Java 11
 
 gradle
+
+
+## API specifications attached in the .json file generated from Postman
