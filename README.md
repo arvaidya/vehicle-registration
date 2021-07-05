@@ -25,5 +25,7 @@ Relevant tests, API specs and assumptions are to be documented
 
 ## Technology used
 Spring boot 2.5.2
+
 Java 11
+
 gradle
