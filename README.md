@@ -32,3 +32,5 @@ gradle
 
 
 ## API specifications attached in the .json file generated from Postman
+Vehicle Registration.postman_collection.json
+
