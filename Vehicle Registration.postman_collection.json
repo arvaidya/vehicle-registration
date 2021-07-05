@@ -1,0 +1,111 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Vehicle Registration",
+		"_postman_id": "10812f86-3e4e-381e-b8a3-5d5d10f08a5b",
+		"description": "Vehicle registration API is created as part of vehicle registration system.\n\nAPIs in the project are restful APIs and functionality of each API is mentioned in the description.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "createPerson",
+			"request": {
+				"url": "localhost:8080/vehicle-registration/person",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\" : \"firstName\",\n\"lastName\": \"lastName\",\n\"vehicles\": null}"
+				},
+				"description": "Create Person API creates a unique person object in the memory of the application."
+			},
+			"response": []
+		},
+		{
+			"name": "createVehicle",
+			"request": {
+				"url": "localhost:8080/vehicle-registration/vehicle",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"make\" : \"toyota\",\n\"model\": \"camry\",\n\"registration\": \"DKE11E\"}"
+				},
+				"description": "Create Vehicle API creates a unique vehicle object in the memory of the application."
+			},
+			"response": []
+		},
+		{
+			"name": "link person to vehicle",
+			"request": {
+				"url": "localhost:8080/vehicle-registration/link",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\" : \"firstName\",\n\"lastName\": \"lastName\",\n\"registration\": \"DKE11E\"}"
+				},
+				"description": "Link person to vehicle API links a vehicle to the person based on rego number.The rego number of vehicle is added to the list of rego numbers in person object."
+			},
+			"response": []
+		},
+		{
+			"name": "unlink person from vehicle",
+			"request": {
+				"url": "localhost:8080/vehicle-registration/unlink",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\" : \"firstName\",\n\"lastName\": \"lastName\",\n\"registration\": \"DKE11E\"}"
+				},
+				"description": "Unlink person from vehicle API removes link of a vehicle from the person. The rego number of vehicle is removed from the list of rego numbers in person object."
+			},
+			"response": []
+		},
+		{
+			"name": "get registrations",
+			"request": {
+				"url": "localhost:8080/vehicle-registration/registrationsData",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"firstName\" : \"firstName\",\n\"lastName\": \"lastName\",\n\"vehicles\": null}"
+				},
+				"description": "This is admin api which retrieves list of Persons and Vehicles showing current status of of the memory of the application."
+			},
+			"response": []
+		}
+	]
+}
